@@ -6,7 +6,6 @@ require_once 'header.php';
 <div id="body-container" class="content-width">
 	  <body style="background-color:#EFF3F4;">
 	 
-	    <h3 style="margin-left: 10px">Hello, Breanna!</h3>
 
 
 	<div style="position: relative; background-color:#63ADD0; width:300px; margin:0 auto;height: 130px; border-radius: 10px;">
