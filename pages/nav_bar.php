@@ -1,3 +1,4 @@
+<link href="css/navbar.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="js/nav.js"></script>
 <nav class="navbar navbar-default" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
@@ -8,7 +9,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#">OCC Effort Tracker</a>
+    <a class="navbar-main" href="#">OCC Effort Tracker</a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->

@@ -1,59 +1,58 @@
-<div style="position: relative; width:500px; margin:0 auto;height: 430px; ">
-	<div style="position: absolute; margin-top: 40px">
-<div class="panel-group" id="accordion">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-          Close Reporting
-        </a>
-      </h4>
-    </div>
-    <div id="collapseOne" class="panel-collapse collapse in">
-      <div class="panel-body">
-    	<div class="checkbox">
-		  <label>
-		    <input type="checkbox" value="">
-		    OCC track all the ME Related p1/p2 incidents and send reports to participants
-		  </label>
+<div style="margin:0 auto; width: 500px; margin-top: 30px">
+	<!-- <button type="button" class="btn btn-success" style="margin-left:0px">Save</button> -->
+	<div class="panel panel-primary clearfix">
+		<div class="panel-heading clearfix" style="height:50px">
+			<h3 class="panel-title pull-left">Close Reporting</h3>
 		</div>
-		<div class="checkbox">
-		  <label>
-		    <input type="checkbox" value="">
-		    Tracks 1-14
-		  </label>
+		<div style="margin:10px">
+			<div class="checkbox" style="width: 275px;">
+			   <label>
+			     <input type="checkbox"> Attend close review meeting once a month with all the stakeholders
+			   </label>
+			 </div>
+			 <form class="form-horizontal  pull-right"role="form" style="width:100px;">
+			   		<div class="form-group">
+			    		<div class="col-sm-10">
+			      			<input type="text" class="form-control" id="inputTime" placeholder="Time">
+			    		</div>
+					</div>
+			 </form>
 		</div>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-          Monitoring Close Tracks
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse">
-      <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-          Close Event Escalation
-        </a>
-      </h4>
-    </div>
-    <div id="collapseThree" class="panel-collapse collapse">
-      <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+	</div>
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h3 class="panel-title">Monitoring Close Tracks</h3>
+		</div>
+		<div style="margin:10px">
+			<div class="checkbox">
+			   <label>
+			     <input type="checkbox"> Tracks 1-14
+			   </label>
+			 </div>
+		</div>
+	</div>
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h3 class="panel-title">Close Event Escalation</h3>
+		</div>
+		<div style="margin:10px">
+			<div class="checkbox">
+			   <label>
+			     <input type="checkbox"> OCC monitors all the events and opens Priority 1/2 incident
+			   </label>
+			 </div>
+		</div>
+	</div>
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h3 class="panel-title">Close Review Meeting</h3>
+		</div>
+		<div style="margin:10px">
+			<div class="checkbox">
+			   <label>
+			     <input type="checkbox"> Attend close review meeting once a month with all the stakeholders
+			   </label>
+			 </div>
+		</div>
+	</div>
 </div>

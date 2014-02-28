@@ -1,6 +1,4 @@
 
-<link href="assets/css/style.min.css" rel="stylesheet">
-<link href="assets/css/retina.min.css" rel="stylesheet">
 	<div class="container">
 		<div class="row">
 				
