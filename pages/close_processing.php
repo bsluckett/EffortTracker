@@ -5,18 +5,22 @@
 			<h3 class="panel-title pull-left">Close Reporting</h3>
 		</div>
 		<div style="margin:10px">
-			<div class="checkbox" style="width: 275px;">
-			   <label>
-			     <input type="checkbox"> Attend close review meeting once a month with all the stakeholders
-			   </label>
-			 </div>
-			 <form class="form-horizontal  pull-right"role="form" style="width:100px;">
-			   		<div class="form-group">
-			    		<div class="col-sm-10">
-			      			<input type="text" class="form-control" id="inputTime" placeholder="Time">
-			    		</div>
-					</div>
-			 </form>
+			<div class="checkbox clearfix">
+				<div style="width: 275px;">
+					<label class"pull-left">
+			    		<input type="checkbox"> Attend close review meeting once a month with all the stakeholders
+			   		</label>
+			 	</div>
+				<div style="margin-top:-40px">
+			 		<form class="form-horizontal pull-right"role="form" style="width:100px;">
+			   			<div class="form-group">
+			    			<div class="col-sm-10">
+			      				<input type="text" class="form-control" id="inputTime" placeholder="Time">
+			    			</div>
+						</div>
+			 		</form>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="panel panel-primary">
@@ -24,11 +28,22 @@
 			<h3 class="panel-title">Monitoring Close Tracks</h3>
 		</div>
 		<div style="margin:10px">
-			<div class="checkbox">
-			   <label>
-			     <input type="checkbox"> Tracks 1-14
-			   </label>
-			 </div>
+			<div class="checkbox clearfix">
+				<div style="width: 275px;">
+					<label class"pull-left">
+			    		<input type="checkbox">Tracks 1-14
+			   		</label>
+			 	</div>
+				<div style="margin-top:-40px">
+			 		<form class="form-horizontal pull-right"role="form" style="width:100px;">
+			   			<div class="form-group">
+			    			<div class="col-sm-10">
+			      				<input type="text" class="form-control" id="inputTime" placeholder="Time">
+			    			</div>
+						</div>
+			 		</form>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="panel panel-primary">
@@ -36,11 +51,22 @@
 			<h3 class="panel-title">Close Event Escalation</h3>
 		</div>
 		<div style="margin:10px">
-			<div class="checkbox">
-			   <label>
-			     <input type="checkbox"> OCC monitors all the events and opens Priority 1/2 incident
-			   </label>
-			 </div>
+			<div class="checkbox clearfix">
+				<div style="width: 275px;">
+					<label class"pull-left">
+			    		<input type="checkbox"> OCC monitors all the events and opens Priority 1/2 incidents
+			   		</label>
+			 	</div>
+				<div style="margin-top:-40px">
+			 		<form class="form-horizontal pull-right"role="form" style="width:100px;">
+			   			<div class="form-group">
+			    			<div class="col-sm-10">
+			      				<input type="text" class="form-control" id="inputTime" placeholder="Time">
+			    			</div>
+						</div>
+			 		</form>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="panel panel-primary">
@@ -48,11 +74,22 @@
 			<h3 class="panel-title">Close Review Meeting</h3>
 		</div>
 		<div style="margin:10px">
-			<div class="checkbox">
-			   <label>
-			     <input type="checkbox"> Attend close review meeting once a month with all the stakeholders
-			   </label>
-			 </div>
+			<div class="checkbox clearfix">
+				<div style="width: 275px;">
+					<label class"pull-left">
+			    		<input type="checkbox"> Attend close review meeting once a month with all the stake holders
+			   		</label>
+			 	</div>
+				<div style="margin-top:-40px">
+			 		<form class="form-horizontal pull-right"role="form" style="width:100px;">
+			   			<div class="form-group">
+			    			<div class="col-sm-10">
+			      				<input type="text" class="form-control" id="inputTime" placeholder="Time">
+			    			</div>
+						</div>
+			 		</form>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
