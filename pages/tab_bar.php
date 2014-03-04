@@ -1,6 +1,6 @@
 <script type="text/javascript" src="js/nav.js"></script>
 
-<ul class="nav nav-pills nav-stacked">
+<ul class="nav nav-pills nav-stacked" id="tab-pane">
   <li class="active"> <a href="#">Close Processing</a> </li>
   <li> <a href="#" >Daily Sunrise Call</a></li>
   <li><a href="#" >General Admin</a></li>

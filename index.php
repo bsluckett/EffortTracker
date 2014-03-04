@@ -4,7 +4,7 @@ require_once 'header.php';
 <body style="background-color:white;">
 	<?php require_once 'pages/nav_bar.php'; ?>
 
- 	<div class="col-md-2 hidden-sm hidden-xs">
+ 	<div class="col-md-2 hidden-sm hidden-xs" style="background-color:#D4E3EF">
  		<?php require_once 'pages/tab_bar.php'; ?>
  	</div>
 	<div id="body-container" class="col-md-7">
@@ -16,7 +16,7 @@ require_once 'header.php';
 			</div>
 			<button type="button" class="btn btn-success" style="background-color:#9BD377; color:#000000; position: absolute; margin-top:65px; right:10px">Submit</button>
 		</div>
-		<div>
+		<div id="task-container">
 			<?php require_once 'pages/close_processing.php'; ?>
 		</div>
 	</div>

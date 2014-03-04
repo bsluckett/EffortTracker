@@ -6,18 +6,16 @@ $(document).ready(function(){
  });
 
  $('#tab-pane li').click(function(event){
-	
 	 var element = $(this).find('div').hasClass('sub-menu') ? $(this).find('div.sub-menu') : this;
 	 tabControl(element);
  });
 });
 
 function tabControl(element){
-	console.log("tab");
 	var content = 'pages/'+$(element).find('a').first().text().toLowerCase().replace(/\s/g,'_')+'.php';
 	//alert(content);
-	$('#tab-container').empty();
- 	if(content!='') $('#tab-container').load(content);
+	$('#task-container').empty();
+ 	if(content!='') $('#task-container').load(content);
 
 	 // Remove css class and apply to the new active tab 
 	$('#tab-pane li').removeClass('active');
@@ -25,7 +23,6 @@ function tabControl(element){
 }
 
  function navigationControl(element){
-	console.log("navi");
  	var content = 'pages/'+$(element).find('a').first().text().toLowerCase().replace(/\s/g,'_')+'.php';
  	// Show loading animation while emptying the existing body and loading in the the new content
 //	$('#loading-overlay').show();
