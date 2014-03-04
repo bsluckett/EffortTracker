@@ -27,6 +27,10 @@ video {
   display: inline-block;
 }
 
+.Stats{
+	float: right;
+}
+
 #body-container {
 	 
 margin:0 auto;

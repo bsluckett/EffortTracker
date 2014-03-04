@@ -1,8 +1,8 @@
 <div style="margin:0 auto; width: 500px; margin-top: 30px">
 	<!-- <button type="button" class="btn btn-success" style="margin-left:0px">Save</button> -->
-	<div class="panel panel-primary clearfix">
-		<div class="panel-heading clearfix" style="height:50px">
-			<h3 class="panel-title pull-left">Close Reporting</h3>
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h3 class="panel-title">Close Reporting</h3>
 		</div>
 		<div style="margin:10px">
 			<div class="checkbox clearfix">
