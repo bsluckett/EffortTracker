@@ -1,0 +1,53 @@
+.Stats{
+	float: right;
+}
+
+#body-container {
+	 
+margin:0 auto;
+	padding:10px 0;
+ 
+	float: left;
+	/* width: 65%; */
+}
+
+#tab-container{
+	width: auto; 
+	height: auto;
+	background-color:#ffffff; 
+/*	display:block;*/
+}
+.content-width {
+	 width:61%;
+}
+
+#body-container {
+	margin:0 auto;
+	padding:10px 0;
+}
+
+body{
+background-color: #EFF3F4
+}
+
+.btn-success {
+  color: #ffffff;
+  background-color: #5cb85c;
+  border-color: #428bca;
+}
+
+#navigation-pane {
+}
+
+#tab-pane{
+
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 5px 10px;
+  margin-bottom: -1px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  }

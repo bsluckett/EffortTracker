@@ -7,6 +7,7 @@
     <link href="assets/css/style.css" rel="stylesheet">
 	<link href="assets/css/retina.min.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/homepage.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
