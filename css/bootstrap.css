@@ -27,29 +27,6 @@ video {
   display: inline-block;
 }
 
-.Stats{
-	float: right;
-}
-
-#body-container {
-	 
-margin:0 auto;
-	padding:10px 0;
- 
-	float: left;
-	/* width: 65%; */
-}
-
-#tab-container{
-	width: auto; 
-	height: auto;
-	background-color:#ffffff; 
-/*	display:block;*/
-}
-.content-width {
-	 width:61%;
-}
-
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -66,10 +43,6 @@ html {
       -ms-text-size-adjust: 100%;
 }
 
-#body-container {
-	margin:0 auto;
-	padding:10px 0;
-}
 body {
   margin: 0;
 }
@@ -2276,10 +2249,6 @@ textarea.input-lg {
   }
 }
 
-body{
-background-color: #EFF3F4
-}
-
 .btn {
   display: inline-block;
   padding: 6px 12px;
@@ -2519,7 +2488,7 @@ fieldset[disabled] .btn-danger.active {
 .btn-success {
   color: #ffffff;
   background-color: #5cb85c;
-  border-color: #428bca;
+  border-color: #4cae4c;
 }
 
 .btn-success:hover,
@@ -4357,13 +4326,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
   border: 1px solid transparent;
 }
 
-#navigation-pane {
-}
-
-#tab-pane{
-
-}
-
 .navbar:before,
 .navbar:after {
   display: table;
@@ -5559,7 +5521,7 @@ a.thumbnail.active {
 .list-group-item {
   position: relative;
   display: block;
-  padding: 5px 10px;
+  padding: 10px 15px;
   margin-bottom: -1px;
   background-color: #ffffff;
   border: 1px solid #dddddd;

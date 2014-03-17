@@ -1,4 +1,5 @@
-<div style="margin:0 auto; width: 500px; margin-top: 30px">
+
+<div id="servicePanels" style="margin:0 auto; width: 500px; margin-top: 30px">
 	<!-- <button type="button" class="btn btn-success" style="margin-left:0px">Save</button> -->
 	<div class="panel panel-primary">
 		<div class="panel-heading">
