@@ -29,7 +29,7 @@ require_once 'header.php';
 	    			<h3 class="panel-title">My Stats</h3>
 	  			</div>
 	  			<div style="margin:10px">
-	  				<strong>Close Processin:</strong> 8 hours </br>
+	  				<strong>Close Processing:</strong> 8 hours </br>
 	  				<strong>Daily Sunrise Call:</strong> 8 hours </br>
 	  				<strong>General Admin:</strong> 8 hours </br>
 	  				<strong>Incident Management:</strong> 8 hours </br>
