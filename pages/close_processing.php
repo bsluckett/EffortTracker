@@ -1,96 +1,34 @@
 
+<?php include $_SERVER["DOCUMENT_ROOT"] ."/Dev/ET/db_conn.php"; ?>
 <div id="servicePanels" style="margin:0 auto; width: 500px; margin-top: 30px">
 	<!-- <button type="button" class="btn btn-success" style="margin-left:0px">Save</button> -->
-	<div class="panel panel-primary">
-		<div class="panel-heading">
-			<h3 class="panel-title">Close Reporting</h3>
-		</div>
-		<div style="margin:10px">
-			<div class="checkbox clearfix">
-				<div style="width: 275px;">
-					<label class"pull-left">
-			    		<input type="checkbox"> Attend close review meeting once a month with all the stakeholders
-			   		</label>
-			 	</div>
-				<div style="margin-top:-40px">
-			 		<form class="form-horizontal pull-right"role="form" style="width:100px;">
-			   			<div class="form-group">
-			    			<div class="col-sm-10">
-			      				<input type="text" class="form-control" id="inputTime" placeholder="Time">
-			    			</div>
-						</div>
-			 		</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="panel panel-primary">
-		<div class="panel-heading">
-			<h3 class="panel-title">Monitoring Close Tracks</h3>
-		</div>
-		<div style="margin:10px">
-			<div class="checkbox clearfix">
-				<div style="width: 275px;">
-					<label class"pull-left">
-			    		<input type="checkbox">Tracks 1-14
-			   		</label>
-			 	</div>
-				<div style="margin-top:-40px">
-			 		<form class="form-horizontal pull-right"role="form" style="width:100px;">
-			   			<div class="form-group">
-			    			<div class="col-sm-10">
-			      				<input type="text" class="form-control" id="inputTime" placeholder="Time">
-			    			</div>
-						</div>
-			 		</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="panel panel-primary">
-		<div class="panel-heading">
-			<h3 class="panel-title">Close Event Escalation</h3>
-		</div>
-		<div style="margin:10px">
-			<div class="checkbox clearfix">
-				<div style="width: 275px;">
-					<label class"pull-left">
-			    		<input type="checkbox"> OCC monitors all the events and opens Priority 1/2 incidents
-			   		</label>
-			 	</div>
-				<div style="margin-top:-40px">
-			 		<form class="form-horizontal pull-right"role="form" style="width:100px;">
-			   			<div class="form-group">
-			    			<div class="col-sm-10">
-			      				<input type="text" class="form-control" id="inputTime" placeholder="Time">
-			    			</div>
-						</div>
-			 		</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="panel panel-primary">
-		<div class="panel-heading">
-			<h3 class="panel-title">Close Review Meeting</h3>
-		</div>
-		<div style="margin:10px">
-			<div class="checkbox clearfix">
-				<div style="width: 275px;">
-					<label class"pull-left">
-			    		<input type="checkbox"> Attend close review meeting once a month with all the stake holders
-			   		</label>
-			 	</div>
-				<div style="margin-top:-40px">
-			 		<form class="form-horizontal pull-right"role="form" style="width:100px;">
-			   			<div class="form-group">
-			    			<div class="col-sm-10">
-			      				<input type="text" class="form-control" id="inputTime" placeholder="Time">
-			    			</div>
-						</div>
-			 		</form>
-				</div>
-			</div>
-		</div>
-	</div>
+	<?php include $_SERVER["DOCUMENT_ROOT"] ."/Dev/ET/ServiceType.php"; ?>
+	<?php
+		$dbname = 'tt_db';
+		$serviceType = 'occ_service_type';
+		$service = 'occ_service';
+		// $sql = "SHOW TABLES FROM $dbname";
+		$ServiceTypeSQL = "SELECT SERVICE_TYPE_NAME FROM $dbname.$serviceType WHERE Parent_SERVICE_ID = 303";
+		 //$ServiceTypeSQL= "SELECT Parent_SERVICE_ID FROM $dbname.$serviceType";
+
+		$ServiceTypeResult = mysql_query($ServiceTypeSQL);
+		if (!$ServiceTypeResult) {
+    		echo "DB Error, could not list tables\n";
+    		echo 'MySQL Error: ' . mysql_error();
+    		exit;
+		} 
+		while ($row = mysql_fetch_row($ServiceTypeResult)){
+			$rowname = "{$row[0]}";
+			$me = new ServiceType($rowname, 'Activity Name Here');
+			echo $me->greet();
+		
+		// echo "<script type=\"text/javascript\"> document.getElementById('#servicePanels').innerHTML=".$paneladd."; </script>";
+		}
+		//echo "after while";
+		//print_r(mysql_free_result($ServiceTypeResult));
+		mysql_free_result($ServiceTypeResult);
+		//echo "testing here";
+	?>
+
 </div>
+
