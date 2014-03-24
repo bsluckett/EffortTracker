@@ -7,7 +7,7 @@
 		$serviceType = 'occ_service_type';
 		$service = 'occ_service';
 		// $sql = "SHOW TABLES FROM $dbname";
-		$ServiceTypeSQL = "SELECT SERVICE_TYPE_NAME FROM $dbname.$serviceType WHERE Parent_SERVICE_ID = 308";
+		$ServiceTypeSQL = "SELECT SERVICE_TYPE_NAME FROM $dbname.$serviceType WHERE Parent_SERVICE_ID = 302";
 		// $service = 'occ_service';
 		// $sql = "SELECT Parent_SERVICE_ID FROM $dbname.$serviceType";
 

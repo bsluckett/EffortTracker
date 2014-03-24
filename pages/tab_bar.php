@@ -9,5 +9,6 @@
 	  <li><a href="#">OCC Service Request</a></li>
 	  <li><a href="#">Physical Access</a></li>
 	  <li><a href="#">Queue Management</a></li>
+	  <li><a href="#">Schedule Event Management</a></li>
 	</ul>
 </div>
