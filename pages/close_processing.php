@@ -1,5 +1,3 @@
-
-<?php include $_SERVER["DOCUMENT_ROOT"] ."/Dev/ET/db_conn.php"; ?>
 <div id="servicePanels" style="margin:0 auto; width: 500px; margin-top: 30px">
 	<!-- <button type="button" class="btn btn-success" style="margin-left:0px">Save</button> -->
 	<?php include $_SERVER["DOCUMENT_ROOT"] ."/Dev/ET/ServiceType.php"; ?>
@@ -31,4 +29,5 @@
 	?>
 
 </div>
+
 

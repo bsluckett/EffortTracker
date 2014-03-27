@@ -9,16 +9,16 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-main" href="#" style="color:white">OCC Effort Tracker</a>
+    <a class="navbar-main" href="./" style="color:white">OCC Effort Tracker</a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav" id="navigation-pane">
-      <li class="active"><a href="#">Home</a></li>
-	  <li><a href="#" style="color:white">History</a></li>
-      <li><a href="#" style="color:white">Admin</a></li>
-      <li><a href="#" style="color:white">Reports</a></li>
+      <li <?php if ($MenuTitle == "Home") { echo "class= \"active\""; } ?> ><a href="./">Home</a></li>
+	    <li <?php if($MenuTitle == "History") { echo "class= \"active\""; } ?>><a href="#" >History</a></li>
+      <li <?php if($MenuTitle == "Admin") { echo "class= \"active\""; } ?> ><a href="admin.php">Admin</a></li>
+      <li <?php if($MenuTitle == "Reports") { echo "class= \"active\""; } ?>><a href="reports.php">Reports</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#" style="color:white">Logout</a></li>

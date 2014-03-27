@@ -4,3 +4,12 @@ a.navbar-main {
   font-size: 18px;
   line-height: 20px;
 }
+
+.activeMenu {
+  	background-image: linear-gradient(#83BFE0 0px, #7DB4D8 31%, #7B9BC9 100%);
+  	color: #787878;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
