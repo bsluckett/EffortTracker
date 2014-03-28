@@ -2,6 +2,11 @@
 	float: right;
 }
 
+.container{
+	width: 1000;
+	margin: auto;
+}
+
 #body-container {
 	 
 margin:0 auto;
@@ -19,6 +24,13 @@ margin:0 auto;
 }
 .content-width {
 	 width:61%;
+}
+
+.alpha{
+	margin-left: 0px;
+}
+.omega{
+	margin-right: 0px;
 }
 
 #body-container {
