@@ -8,7 +8,7 @@
 		<div class="col-md-6">
 			<?php include 'pages/Date.php'; ?>
 			<div id="task-container">
-
+				<?php include 'pages/close_processing.php' ?>
 			</div>
 		</div>
 		<div class="col-md-3 omega">	

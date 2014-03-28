@@ -19,7 +19,7 @@
   </head>
 
   <body style="background-color:white;">
-
+<?php include 'inc/db_conn.php' ?>
 <nav class="navbar navbar-default" role="navigation" style="background-image: linear-gradient(#2F8FC1 0px, #2A7BB0 31%, #2C5692 100%);color:white;">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
