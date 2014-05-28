@@ -1,31 +1,28 @@
-<?php include $_SERVER["DOCUMENT_ROOT"] ."/Dev/ET/inc/db_conn.php"; ?>
-<div id="servicePanels" style="margin:0 auto; width: 500px; margin-top: 30px">
-	<!-- <button type="button" class="btn btn-success" style="margin-left:0px">Save</button> -->
-	<?php include $_SERVER["DOCUMENT_ROOT"] ."/Dev/ET/ServiceType.php"; ?>
-	<?php
-		$dbname = 'tt_db';
-		$serviceType = 'occ_service_type';
-		$service = 'occ_service';
-		// $sql = "SHOW TABLES FROM $dbname";
-		$ServiceTypeSQL = "SELECT SERVICE_TYPE_NAME FROM $dbname.$serviceType WHERE Parent_SERVICE_ID =" . $ServiceID;
-		 //$ServiceTypeSQL= "SELECT Parent_SERVICE_ID FROM $dbname.$serviceType";
-
-		$ServiceTypeResult = mysql_query($ServiceTypeSQL);
-		if (!$ServiceTypeResult) {
-    		echo "DB Error, could not list tables\n";
-    		echo 'MySQL Error: ' . mysql_error();
-    		exit;
-		} 
-		while ($row = mysql_fetch_row($ServiceTypeResult)){
-			$rowname = "{$row[0]}";
-			$me = new ServiceType($rowname, 'Activity Name Here');
-			echo $me->greet();
-		
-		// echo "<script type=\"text/javascript\"> document.getElementById('#servicePanels').innerHTML=".$paneladd."; </script>";
+<?php 
+    function get_activity($ServiceTypeID) {
+		include $_SERVER["DOCUMENT_ROOT"] ."/Dev/ET/inc/db_conn.php"; 
+		try{
+			//$results = $db->query("SELECT ACTIVITY_NAME FROM occ_activity INNER JOIN occ_service_type ON occ_service_type.SERVICE_TYPE_ID = occ_activity.PARENT_SERVICE_TYPE_ID WHERE occ_service_type.SERVICE_TYPE_ID =" . $ServiceID;)
+			$sql = "SELECT ACTIVITY_NAME FROM occ_activity WHERE PARENT_SERVICE_TYPE_ID =". $ServiceTypeID;
+			//echo $ServiceID;
+			$results = $db->query($sql);
+		}  catch (Exception $e){
+			echo "Data could not be retrieved from the database.";
+			exit;
 		}
-		//echo "after while";
-		//print_r(mysql_free_result($ServiceTypeResult));
-		mysql_free_result($ServiceTypeResult);
-		//echo "testing here";
-	?>
-</div>
+		$activity = $results->fetchAll(PDO::FETCH_ASSOC); 
+		return $activity;
+	}
+	function get_ServiceType($ServiceID) {
+		include $_SERVER["DOCUMENT_ROOT"] ."/Dev/ET/inc/db_conn.php"; 
+		try{
+			$sql = "SELECT SERVICE_TYPE_NAME,SERVICE_TYPE_ID FROM occ_service_type WHERE PARENT_SERVICE_ID =". $ServiceID;
+			$results = $db->query($sql);
+		}  catch (Exception $e){
+			echo "Data could not be retrieved from the database.";
+			exit;
+		}
+		$ServiceType = $results->fetchAll(PDO::FETCH_ASSOC); 
+		return $ServiceType;
+	}
+?>
