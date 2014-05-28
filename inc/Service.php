@@ -1,13 +1,8 @@
-<li id="submenuList" > <a href="#" onclick="showUser(this.value)"><?php echo $S["SERVICE_NAME"] ?></a> </li>
+<li id="<?php echo $S["SERVICE_ID"] ?>" > <a href="#" onclick="showUser(<?php echo $S["SERVICE_ID"] ?>)"><?php echo $S["SERVICE_NAME"] ?></a> </li>
 
 <script>
- $(document).ready(function() {
-      $('#submenuList').click(function() {
-		alert("I'm finally here");
-	  });  
-});
-/* function showUser(str) {
-  alert("in showUser");
+function showUser(str) {
+  //str = $(element).attr('id')
   if (str=="") {
     //document.getElementById("txtHint").innerHTML="";
     return;
@@ -23,9 +18,8 @@
       //document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
     }
   }
-  xmlhttp.open("GET","submenu.php?q="+str,true);
+  xmlhttp.open("GET","ServiceID.php?serviceID="+str,true);
   xmlhttp.send();
-} */
+}
 
-//"<?php echo $S["SERVICE_ID"] ?>"
 </script>

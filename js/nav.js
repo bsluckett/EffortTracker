@@ -1,25 +1,41 @@
 $(document).ready(function(){
-	 /** Navigation control **/
- // $('#navigation-pane li').click(function(event){
-	// var element = $(this).find('div').hasClass('sub-menu') ? $(this).find('div.sub-menu') : this;
-	// navigationControl(element);
- // });
+/* var MenuElement;
+  $('#navigation-pane li').click(function(event){
+	alert("here");
+	MenuElement = $(this).find('div').hasClass('sub-menu') ? $(this).find('div.sub-menu') : this;
+	alert ($(MenuElement).find('a').first().text().toLowerCase().replace(/\s/g,'_'));
+  }); */
 
  $('#tab-pane li').click(function(event){
-	 var element = $(this).find('div').hasClass('sub-menu') ? $(this).find('div.sub-menu') : this;
-	 tabControl(element);
+	 var SMElement = $(this).find('div').hasClass('sub-menu') ? $(this).find('div.sub-menu') : this;
+	 tabControl(SMElement);
  });
 });
 
-function tabControl(element){
-	var content = 'pages/'+$(element).find('a').first().text().toLowerCase().replace(/\s/g,'_')+'.php';
-	//alert(content);
-	$('#task-container').empty();
- 	if(content!='') $('#task-container').load(content);
+function tabControl(SMElement){
+	//var content = 'pages/'+$(element).find('a').first().text().toLowerCase().replace(/\s/g,'_')+'.php';
+	var ServiceID = $(SMElement).attr('id');
+	reports(ServiceID);
+	
+		xmlhttp.open("GET","panels.php?serviceID="+ServiceID,true);
+		xmlhttp.send();
+		var content ='panels.php?serviceID='+ServiceID;
+		$('#task-container').empty();
+		if(content!='') $('#task-container').load(content);
+		$('#').empty();
+ 
 
 	 // Remove css class and apply to the new active tab 
 	$('#tab-pane li').removeClass('active');
-	if($(element).parent().attr('id')=='tab-pane') $(element).addClass('active');
+	if($(SMElement).parent().attr('id')=='tab-pane') $(SMElement).addClass('active');
+	
+}
+function reports(ServiceID){
+		xmlhttp.open("GET","colrotseries.php?serviceID="+ServiceID,true);
+		xmlhttp.send();
+		var ReportContent = 'colrotseries.php?serviceID='+ServiceID;
+		$('#bar-container').empty();
+		if(ReportContent!='') $('#bar-container').load(ReportContent);
 }
 
 //  function navigationControl(element){
