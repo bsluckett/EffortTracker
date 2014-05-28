@@ -7,8 +7,8 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/homepage.css" rel="stylesheet" type="text/css">
     <link href="css/navbar.css" rel="stylesheet" type="text/css">
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
     <script type="text/javascript" src="js/nav.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,6 +20,8 @@
 
   <body style="background-color:white;">
 <?php include 'inc/db_conn.php' ?>
+<?php include_once $_SERVER["DOCUMENT_ROOT"] ."/Dev/ET/inc/tasks.php" ?>
+
 <nav class="navbar navbar-default" role="navigation" style="background-image: linear-gradient(#2F8FC1 0px, #2A7BB0 31%, #2C5692 100%);color:white;">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
@@ -43,5 +45,5 @@
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#" style="color:white">Logout</a></li>
     </ul>
-  </div><!-- /.navbar-collapse -->
+  </div>
 </nav>
