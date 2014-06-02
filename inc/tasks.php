@@ -40,9 +40,6 @@
 		}
 		
 		public function log_activity($ActivityID, $Time){
-			echo '<script language="javascript">';
-			echo 'alert("in log_activity")';
-			echo '</script>';
 			include $_SERVER["DOCUMENT_ROOT"] ."/Dev/ET/inc/db_conn.php"; 
 			try{
 				$sql = "INSERT INTO user_log (username, task_date, activity_id, activity_time) VALUES ('bluckett4', 5052014,". $ActivityID .",'". $Time."')";
@@ -54,6 +51,19 @@
 				exit;
 			}
 			return;
+		}
+		public function get_userLog($username, $startDate, $endDate, $activityID){
+			include $_SERVER["DOCUMENT_ROOT"] ."/Dev/ET/inc/db_conn.php"; 
+			try{
+				$sql = "SELECT sum(activity_time) as TimeTotal FROM user_log WHERE activity_id =". $activityID;
+				$results = $db->query($sql);
+
+			} catch (Exception $e){
+				echo "Data could not be retrieved from the database.";
+				exit;
+			}
+			$userLog = $results->fetchAll(PDO::FETCH_ASSOC); 
+			return $userLog;
 		}
 	}
 	

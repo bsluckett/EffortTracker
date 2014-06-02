@@ -1,5 +1,5 @@
 
-<script type="text/javascript" src="js/barchart.js"></script>
+<!--<script type="text/javascript" src="js/barchart.js"></script>-->
 <?php $MenuTitle = "Reports"; ?>
 <?php include 'inc/header.php'; 
 	 // require_once 'inc/tasks.php';
@@ -10,7 +10,7 @@
     <?php include 'inc/sub_menu.php'; ?>
   </div>
   <div class="col-md-9">
-    <?php include 'pages/daterange.php'; ?>
+    <?php include 'pages/ReportDaterange.php'; ?>
     <div id="bar-container"> <?php include 'colrotseries.php'; ?> </div>
   
   </div>

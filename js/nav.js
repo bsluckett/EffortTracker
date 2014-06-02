@@ -1,3 +1,4 @@
+var XServiceID;
 $(document).ready(function(){
 /* var MenuElement;
   $('#navigation-pane li').click(function(event){
@@ -5,11 +6,12 @@ $(document).ready(function(){
 	MenuElement = $(this).find('div').hasClass('sub-menu') ? $(this).find('div.sub-menu') : this;
 	alert ($(MenuElement).find('a').first().text().toLowerCase().replace(/\s/g,'_'));
   }); */
-
  $('#tab-pane li').click(function(event){
 	 var SMElement = $(this).find('div').hasClass('sub-menu') ? $(this).find('div.sub-menu') : this;
 	 tabControl(SMElement);
  });
+
+
 });
 
 function tabControl(SMElement){

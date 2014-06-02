@@ -1,8 +1,11 @@
-
-<div style="position: relative; background-color:#63ADD0; width:300px; margin:0 auto;height: 130px; border-radius: 10px;">
-			<h4 style="position: absolute; margin-left: 40px; margin-top: 10px"><strong>Select a date to log work</strong></h4><br>
-			<div style="position: absolute; margin-left: 15px; margin-top: 20px">
-				<h4 style="display: inline-block;">Start Date:</h4><input type="date" name="Home_Date" style="margin-left:10px">
+<div class="well col-md-6" style="margin-left:105px;">
+	<div class="form-group">
+		<label class="control-label" for="date01">Select a date to log work:</label>
+		<div class="controls">
+			<div class="input-group date col-md-10">
+				<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+				<input type="text" class="form-control date-picker" id="date01" data-date-format="mm/dd/yyyy">
 			</div>
-			<button type="button" class="btn btn-success" style="background-color:#9BD377; color:#000000; position: absolute; margin-top:65px; right:10px">Submit</button>
 		</div>
+	</div>
+</div>
