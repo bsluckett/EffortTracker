@@ -2,25 +2,21 @@
 <html>
   <head>
     <title>OCC Effort Tracker</title>
-   <link href="css/bootstrap.min.css" rel="stylesheet">
-   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" media="all" href="css/daterangepicker-bs3.css" />
-<link href="css/navbar.css" rel="stylesheet" type="text/css">
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/homepage.css" rel="stylesheet" type="text/css">
-    <link href="css/navbar.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/moment.js"></script>
-<script type="text/javascript" src="js/daterangepicker.js"></script>
-<script src="assets/js/bootstrap-datepicker.min.js"></script>
-
-
-
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <!-- Bootstrap -->
+      <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" media="all" href="css/daterangepicker-bs3.css" />
+      <link href="css/navbar.css" rel="stylesheet" type="text/css">
+      <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      <link href="css/homepage.css" rel="stylesheet" type="text/css">
+      <link href="css/navbar.css" rel="stylesheet" type="text/css">
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/moment.js"></script>
+      <script type="text/javascript" src="js/daterangepicker.js"></script>
+      <script src="assets/js/bootstrap-datepicker.min.js"></script>
       <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
-    <script type="text/javascript" src="js/nav.js"></script>
+      <script type="text/javascript" src="js/nav.js"></script>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Bootstrap -->
    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,10 +25,11 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
   </head>
-
   <body style="background-color:white;">
-<?php include 'inc/db_conn.php' ?>
-<?php include_once $_SERVER["DOCUMENT_ROOT"] ."/Dev/ET/inc/tasks.php" ?>
+<?php //include $_SERVER["DOCUMENT_ROOT"] ."/Dev/ET/inc/db_conn.php";  ?>
+<?php //include_once $_SERVER["DOCUMENT_ROOT"] ."/Dev/ET/inc/tasks.php" ?>
+<?php include getcwd()."/inc/db_conn.php";  ?>
+<?php include_once getcwd()."/inc/tasks.php" ?>
 
 <nav class="navbar navbar-default" role="navigation" style="background-image: linear-gradient(#2F8FC1 0px, #2A7BB0 31%, #2C5692 100%);color:white;">
   <!-- Brand and toggle get grouped for better mobile display -->

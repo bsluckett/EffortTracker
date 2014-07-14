@@ -1,7 +1,7 @@
 <?php $MenuTitle = "Admin"; ?>
 <?php include 'inc/header.php'; ?>
 <?php 
-	include_once $_SERVER["DOCUMENT_ROOT"] ."/Dev/ET/inc/tasks.php";
+	include_once $_SERVER["DOCUMENT_ROOT"] ."/inc/tasks.php";
 	$ServiceObject = new TaskObject;
 	$Service = $ServiceObject->get_Services();
 	$ServiceID = 312;
@@ -24,7 +24,7 @@
     <tr >
       <td  style=" padding-right:2%"><p><BR>
           <SELECT NAME="Service" SIZE="10" style="width:100% ; font-family:Helvetica Neue, Helvetica, Arial, sans-serif;" onChange="showServiceType(this.value)">
-            <?php 	foreach($Service as $S) { ?>
+            <?php foreach($Service as $S) { ?>
             <OPTION value=<?php echo $S["SERVICE_ID"] ?>> <?php echo $S["SERVICE_NAME"] ?>
             <?php 
     } ?>

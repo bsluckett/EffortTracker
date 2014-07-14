@@ -1,5 +1,6 @@
 <?php $MenuTitle = "Home"; ?>
-<?php session_start(); ?>
+<?php session_start();
+ ?>
 <?php include 'inc/header.php';?>
 	<div class="container clearfix">
 	 	<div class="col-md-3 alpha">
@@ -16,23 +17,19 @@
 				</form>
 			</div>
 			<div id="task-container">
-				<?php $ServiceID=300; include $_SERVER["DOCUMENT_ROOT"] ."/Dev/ET/panels.php";?>
+				<?php $ServiceID=300; include $_SERVER["DOCUMENT_ROOT"] ."/panels.php";?>
 			</div>
 		</div>
 		<div class="col-md-4 omega">	
 			<?php include 'inc/myStats.php'; ?>
 			<div class="well" style="width:300px">
     			<div class="input-group">
-      				<input type="text" class="form-control" placeholder="Incident Numbers">
+      				<input id="incidentTextbox" type="text" class="form-control" placeholder="Incident Numbers">
       				<span class="input-group-btn">
-        				<button class="btn btn-default" type="button">Submit</button>
+        				<button class="btn btn-default" type="button" id="saveIncident" onclick="submitIncident()">Submit</button>
       				</span>
     			</div><!-- /input-group -->
-    			<div class="list-group" style="padding:5px">
-    				<div class="f-icon-close-big" style="float:right;" onclick="$(this).closest('.list-group').remove();"></div>
-  					<a href="#" class="list-group-item active">INC000030255928</a>
-  					<a href="#" class="list-group-item">INC000030255086</a>
-  					<a href="#" class="list-group-item">INC000030255643</a>
+    			<div id="currentIncident" class="list-group" style="padding:5px">
 				</div>
   			</div><!-- /.col-lg-4 -->
 		</div>
@@ -52,17 +49,41 @@
 ?>
 
 <script>
+    $(document).ready(function() {
+      $('#saveIncident').click(function() {
+        var newIncident = '<a href="#" class="list-group-item">' + $('#incidentTextbox').val() + '<button type="button" class="close" onclick="$(this).closest(\'.list-group-item\').remove();" aria-hidden="true">&times;</button></a>';
+        $('#currentIncident').append(newIncident);
+      });
+    });
+
+    function submitIncident(){
+    	var Taskxmlhttp;
+		if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+			Taskxmlhttp=new XMLHttpRequest();
+		}
+		else{// code for IE6, IE5
+			Taskxmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		Taskxmlhttp.onreadystatechange=function(){
+			if (Taskxmlhttp.readyState==4 && Taskxmlhttp.status==200){
+			}
+		}
+		alert($('#incidentTextbox').val());
+		Taskxmlhttp.open("GET","incident.php?q="+$('#incidentTextbox').val(),true);
+		Taskxmlhttp.send();
+    }
+    
 	function submitMe(){
 		var submitDate = $('#Home_Date').val();
-		var xmlhttp;
+		var Taskxmlhttp;
 			if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
-				xmlhttp=new XMLHttpRequest();
+				Taskxmlhttp=new XMLHttpRequest();
 			}
 			else{// code for IE6, IE5
-				xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+				Taskxmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 			}
-			xmlhttp.onreadystatechange=function(){
-				if (xmlhttp.readyState==4 && xmlhttp.status==200){
+			Taskxmlhttp.onreadystatechange=function(){
+				if (Taskxmlhttp.readyState==4 && Taskxmlhttp.status==200){
 				}
 			}
 		var formsCollection = document.getElementsByTagName("form");
@@ -78,8 +99,8 @@
 					Entry[1].push(Time);
 					alert("send");
 					//xmlhttp.open("GET","submit.php?q="+activityID+"-"+Time+"-"+submitDate,true);
-					xmlhttp.open("GET","submit.php?q="+activityID+"-"+Time,true);
-					xmlhttp.send();
+					Taskxmlhttp.open("GET","submit.php?q="+activityID+"-"+Time,true);
+					Taskxmlhttp.send();
 				} else {
 					var actCheck = false;
 				}

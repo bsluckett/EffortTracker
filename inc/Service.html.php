@@ -1,4 +1,4 @@
-<li id="submenuList" > <a href="#" onclick="showUser(this.value)"><?php echo $S["SERVICE_NAME"] ?></a> </li>
+<li id="submenuList" > <a href="" onclick="showUser(this.value)"><?php echo $S["SERVICE_NAME"] ?></a> </li>
 
 <script>
  $(document).ready(function() {

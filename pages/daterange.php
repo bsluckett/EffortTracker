@@ -1,11 +1,3 @@
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/moment.js"></script>
-<script type="text/javascript" src="js/daterangepicker.js"></script>
-<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" media="all" href="css/daterangepicker-bs3.css" />
-<link href="css/navbar.css" rel="stylesheet" type="text/css">
 <div class="well">
   <form class="form-horizontal">
     <fieldset>

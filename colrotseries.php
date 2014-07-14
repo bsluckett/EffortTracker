@@ -2,18 +2,18 @@
   //$ServiceID = 312;
   if($_SERVER["REQUEST_METHOD"] == "GET" )
   {
-	if (isset($_GET["serviceID"])) {
-		$ServiceID = $_GET["serviceID"];
-		
-	} else {
-		$ServiceID = 300;
-		//$ServiceID = $_GET["serviceID"];
-	}
+    if (isset($_GET["serviceID"])) {
+        $ServiceID = $_GET["serviceID"];
+
+    } else {
+        $ServiceID = 300;
+        //$ServiceID = $_GET["serviceID"];
+    }
   }
-	  include $_SERVER["DOCUMENT_ROOT"] ."/Dev/ET/inc/db_conn.php"; 
-	  require_once $_SERVER["DOCUMENT_ROOT"] ."/Dev/ET/inc/tasks.php";
-	  $ServiceTypeObject = new TaskObject;
-	  $ServiceType = $ServiceTypeObject->get_ServiceType($ServiceID);
+      include $_SERVER["DOCUMENT_ROOT"] ."/inc/db_conn.php"; 
+      require_once $_SERVER["DOCUMENT_ROOT"] ."/inc/tasks.php";
+      $ServiceTypeObject = new TaskObject;
+      $ServiceType = $ServiceTypeObject->get_ServiceType($ServiceID);
       foreach ($ServiceType as $row){
         $activityObject  = new TaskObject;
         $activity = $activityObject->get_activity($row['SERVICE_TYPE_ID']);
@@ -27,25 +27,31 @@
         }
         $return[]=array('st'=>$row['SERVICE_TYPE_NAME'],
                     'count'=>$TotalTime,
-					'color'=>"#3880aa"
-					);
-		};
-		
+                    'color'=>"#3880aa"
+                    );
+        };
+
 $json_array = json_encode($return);
 ?>
 <script src="amcharts.js" type="text/javascript"></script>
 <!--<link rel="stylesheet" href="css/style.css" type="text/css">-->
 <script src="serial.js" type="text/javascript"></script>
 <script type="text/javascript">
+$(document).ready(function(){
+  //  alert("the page has loaded...");
+});
             var chart;
             var chartData = <?php echo $json_array ?>;
+           // alert("testing!");
 
-			AmCharts.ready(function () {
+            AmCharts.ready(function () {
+            //    alert("in amchart ready");
                LoadChart();
             });
             LoadChart();
-			function LoadChart(){
-				// SERIAL CHART
+            function LoadChart(){
+           //     alert("in load chart");
+                // SERIAL CHART
                 chart = new AmCharts.AmSerialChart();
                 chart.dataProvider = chartData;
                 chart.categoryField = "st";
@@ -87,7 +93,10 @@ $json_array = json_encode($return);
                 chart.creditsPosition = "top-right";
 
                 // WRITE
+             //   alert("here");
                 chart.write("chartdiv");
-			}
+              //  alert(chart.write);
+              //  alert("here2");
+            }
         </script>
 <div id="chartdiv" style="width: 800px; height: 400px;"></div>

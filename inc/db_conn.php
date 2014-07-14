@@ -11,7 +11,7 @@
 	// }
 
 	try{
-		$db = new PDO("mysql:host=10.78.186.224;dbname=tt_db","root","");
+		$db = new PDO("mysql:host=53b1e1624970fa92060000b9-itoclae.cloudapps.cisco.com;port=52271;dbname=efforttrackerintrtppersonal","adminAqirqDm","uRHQbiNRpVWM");
 		$db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 		$db->exec("SET NAMES 'utf8'");
 	} catch (Exception $e) {
